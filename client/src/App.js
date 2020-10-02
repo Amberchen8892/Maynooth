@@ -7,6 +7,8 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Admin from './components/auth/Admin';
 import Alert from './components/layout/Alert';
+import ProductsScreen from './components/screens/ProductsScreen';
+import ProductDetail from './components/screens/ProductDetail';
 //Redux
 import { Provider } from 'react-redux';
 import store from './store';
@@ -23,8 +25,10 @@ const App = () => (
           <Alert />
           <Switch>
             <Route exact path='/register' component={Register} />
-            <Route exact path='/login' component={Login} />
-            <Route exact path='/admin' component={Admin} />
+            <Route path='/login' component={Login} />
+            <Route path='/admin' component={Admin} />
+            <Route path='/products' component={ProductsScreen} />
+            <Route path='/product/:id' component={ProductDetail} />
           </Switch>
         </section>
         <Footer />

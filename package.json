@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "furniture website",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
@@ -14,7 +15,9 @@
   "dependencies": {
     "axios": "^0.20.0",
     "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
     "config": "^3.3.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
     "jsonwebtoken": "^8.5.1",

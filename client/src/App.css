@@ -191,6 +191,16 @@ body {
   }
 }
 
+.hover-nav {
+  color: white;
+}
+.hover-nav:hover {
+  transform: scale(1.1);
+  color: orange;
+}
+.rating span {
+  margin: 0.1rem;
+}
 /* alert */
 .alert {
   padding: 0.8rem;

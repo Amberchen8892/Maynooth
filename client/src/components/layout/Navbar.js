@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const openMenu = () => {
@@ -14,7 +15,9 @@ const Navbar = () => {
           className='navbar navbar-light bg-dark'
           style={{ paddingRight: '100px', paddingLeft: '100px' }}
         >
-          <span className='navbar-brand mb-0 h1'>Navbar</span>
+          <span className='navbar-brand mb-0 h1' style={{ color: 'white' }}>
+            <Link to='/'>Maynooth</Link>
+          </span>
           <form className='form-inline my-2 my-lg-0'>
             <input
               className='form-control mr-sm-2'
@@ -32,29 +35,16 @@ const Navbar = () => {
 
           <ul className='nav justify-content-end'>
             <li className='nav-item'>
-              <a className='nav-link active' href='#'>
-                Active
-              </a>
+              <Link className='nav-link hover-nav' to='/cart'>
+                <i className='fas fa-shopping-cart'></i>
+                Cart
+              </Link>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='#'>
-                Link
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a className='nav-link' href='#'>
-                Link
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a
-                className='nav-link disabled'
-                href='#'
-                tabindex='-1'
-                aria-disabled='true'
-              >
-                Disabled
-              </a>
+              <Link className='nav-link hover-nav' to='/login'>
+                <i className='fas fa-user'></i>
+                Sign In
+              </Link>
             </li>
           </ul>
         </nav>
