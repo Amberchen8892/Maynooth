@@ -2,6 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import colors from 'colors';
 import connectDB from './config/db.js';
+import productRoutes from './routes/productRoutes.js';
+import { notFound, errorHandle } from './middleware/errorMiddleware.js';
 
 dotenv.config();
 connectDB();
@@ -11,11 +13,10 @@ const app = express();
 app.use(express.json({ extended: false }));
 
 app.get('/', (req, res) => res.send('working'));
+app.use('/api/products', productRoutes);
 
-// define routes
-// app.use('/api/users', require('./routes/api/users'));
-// app.use('/api/auth', require('./routes/api/auth'));
-// app.use('/api/products', require('./routes/api/products'));
+app.use(notFound);
+app.use(errorHandle);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>

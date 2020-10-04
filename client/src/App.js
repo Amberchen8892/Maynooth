@@ -6,7 +6,7 @@ import Footer from './components/layout/Footer';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Admin from './components/auth/Admin';
-import Alert from './components/layout/Alert';
+
 import ProductsScreen from './components/screens/ProductsScreen';
 import ProductDetail from './components/screens/ProductDetail';
 //Redux
@@ -22,7 +22,6 @@ const App = () => (
         <Navbar />
         <Route exact path='/' component={Home} />
         <section>
-          <Alert />
           <Switch>
             <Route exact path='/register' component={Register} />
             <Route path='/login' component={Login} />
