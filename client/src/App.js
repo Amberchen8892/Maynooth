@@ -9,6 +9,7 @@ import Admin from './components/auth/Admin';
 
 import ProductsScreen from './components/screens/ProductsScreen';
 import ProductDetail from './components/screens/ProductDetail';
+import CartScreen from './components/screens/CartScreen';
 //Redux
 import { Provider } from 'react-redux';
 import store from './store';
@@ -28,6 +29,7 @@ const App = () => (
             <Route path='/admin' component={Admin} />
             <Route path='/products' component={ProductsScreen} />
             <Route path='/product/:id' component={ProductDetail} />
+            <Route path='/cart/:id?' component={CartScreen} />
           </Switch>
         </section>
         <Footer />
