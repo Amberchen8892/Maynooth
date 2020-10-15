@@ -10,6 +10,7 @@ import Admin from './components/auth/Admin';
 import ProductsScreen from './components/screens/ProductsScreen';
 import ProductDetail from './components/screens/ProductDetail';
 import CartScreen from './components/screens/CartScreen';
+import ProfileScreen from './components/screens/ProfileScreen';
 //Redux
 import { Provider } from 'react-redux';
 import store from './store';
@@ -27,6 +28,7 @@ const App = () => (
             <Route exact path='/register' component={Register} />
             <Route path='/login' component={Login} />
             <Route path='/admin' component={Admin} />
+            <Route path='/profile' component={ProfileScreen} />
             <Route path='/products' component={ProductsScreen} />
             <Route path='/product/:id' component={ProductDetail} />
             <Route path='/cart/:id?' component={CartScreen} />
