@@ -201,3 +201,9 @@ body {
 .rating span {
   margin: 0.1rem;
 }
+#username {
+  color: white !important;
+}
+.mobile-nav {
+  display: flex;
+}

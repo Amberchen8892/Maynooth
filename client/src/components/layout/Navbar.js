@@ -1,12 +1,23 @@
 import React, { Fragment } from 'react';
+import { withRouter } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { NavDropdown, Container, Nav } from 'react-bootstrap';
+import { logout } from '../../actions/userActions';
 
-const Navbar = () => {
+const Navbar = ({ history }) => {
+  const dispatch = useDispatch();
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
   const openMenu = () => {
     document.querySelector('.sidebar').classList.add('open');
   };
   const closeMenu = () => {
     document.querySelector('.sidebar').classList.remove('open');
+  };
+  const logoutHandler = () => {
+    dispatch(logout());
+    history.push('/login');
   };
   return (
     <Fragment>
@@ -40,12 +51,23 @@ const Navbar = () => {
                 Cart
               </Link>
             </li>
-            <li className='nav-item'>
-              <Link className='nav-link hover-nav' to='/login'>
-                <i className='fas fa-user'></i>
-                Sign In
-              </Link>
-            </li>
+            {userInfo ? (
+              <NavDropdown title={userInfo.name} id='username'>
+                <Link to='/profile'>
+                  <NavDropdown.Item>Profile</NavDropdown.Item>
+                </Link>
+                <NavDropdown.Item onClick={logoutHandler}>
+                  Logout
+                </NavDropdown.Item>
+              </NavDropdown>
+            ) : (
+              <li className='nav-item'>
+                <Link className='nav-link hover-nav' to='/login'>
+                  <i className='fas fa-user'></i>
+                  Sign In
+                </Link>
+              </li>
+            )}
           </ul>
         </nav>
         <ul
@@ -332,12 +354,48 @@ const Navbar = () => {
       <div id='content-mobile'>
         <header className='header'>
           <div className='brand'>
-            <button onClick={openMenu}>&#9776;</button>
-            <a href='index.html'>Maynooth</a>
+            <button style={{ fontSize: '1.5rem' }} onClick={openMenu}>
+              &#9776;
+            </button>
+            <a href='index.html' style={{ fontSize: '1.5rem' }}>
+              Maynooth
+            </a>
           </div>
-          <div className='header-links'>
-            <a href='cart.html'>Cart</a>
-            <a href='signin.html'>Signin</a>
+          <div className='mobile-nav'>
+            <Nav.Item style={{ padding: '0', margin: '0' }}>
+              <Nav.Link href='/home'>
+                <i
+                  style={{ color: 'white' }}
+                  className='fas fa-shopping-cart'
+                ></i>{' '}
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item style={{ padding: '0', margin: '0' }}>
+              {userInfo ? (
+                <NavDropdown
+                  title={userInfo.name
+                    .split(' ')
+                    .map(function (item) {
+                      return item[0];
+                    })
+                    .join('')}
+                  id='username'
+                >
+                  <Link to='/profile'>
+                    <NavDropdown.Item>Profile</NavDropdown.Item>
+                  </Link>
+                  <NavDropdown.Item onClick={logoutHandler}>
+                    Logout
+                  </NavDropdown.Item>
+                </NavDropdown>
+              ) : (
+                <li className='nav-item'>
+                  <Link className='nav-link hover-nav' to='/login'>
+                    <i className='fas fa-user'></i>
+                  </Link>
+                </li>
+              )}
+            </Nav.Item>
           </div>
         </header>
 
@@ -418,4 +476,4 @@ const Navbar = () => {
     </Fragment>
   );
 };
-export default Navbar;
+export default withRouter(Navbar);

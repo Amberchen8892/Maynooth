@@ -1,28 +1,38 @@
-import React, { Fragment, useState } from 'react';
-import { connect } from 'react-redux';
+import React, { Fragment, useState, useEffect } from 'react';
 
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import Message from '../layout/Message';
+import Loader from '../layout/Loader';
+import { register } from '../../actions/userActions';
 
-const Register = ({ setAlert, register }) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    password2: '',
-  });
-  const { name, email, password, password2 } = formData;
-  const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+const Register = ({ location, history }) => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [message, setMessage] = useState(null);
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    console.log('password', password);
-    console.log('password2', password2);
-    if (password !== password2) {
-      setAlert('passwors are not match', 'danger');
-    } else {
-      register({ name, email, password });
+  const dispatch = useDispatch();
+
+  const userRegister = useSelector((state) => state.userRegister);
+  const { loading, error, userInfo } = userRegister;
+
+  const redirect = location.search ? location.search.split('=')[1] : '/';
+
+  useEffect(() => {
+    if (userInfo) {
+      history.push(redirect);
     }
+  }, [history, redirect, userInfo]);
+
+  const registerHandler = (e) => {
+    e.preventDefault();
+    if (password !== confirmPassword) {
+      setMessage('Passwords do not match');
+    }
+    // dispatch register
+    dispatch(register(name, email, password));
   };
   return (
     <Fragment>
@@ -30,6 +40,9 @@ const Register = ({ setAlert, register }) => {
         className='container'
         style={{ marginTop: '3rem', marginBottom: '3rem' }}
       >
+        {message && <Message variant='danger'>{message}</Message>}
+        {error && <Message variant='danger'>{error}</Message>}
+        {loading && <Loader />}
         <div
           className='row'
           style={{
@@ -44,7 +57,7 @@ const Register = ({ setAlert, register }) => {
           </small>
         </div>
         <div style={{ marginTop: '1rem' }}>
-          <form onSubmit={(e) => onSubmit(e)}>
+          <form onSubmit={registerHandler}>
             <div className='form-group row'>
               <label htmlFor='staticEmail' className='col-sm-2 col-form-label'>
                 Name <span style={{ color: 'red' }}>*</span>
@@ -57,7 +70,7 @@ const Register = ({ setAlert, register }) => {
                   className='form-control'
                   placeholder='enter your full name'
                   style={{ width: '50%' }}
-                  onChange={(e) => onChange(e)}
+                  onChange={(e) => setName(e.target.value)}
                   // required
                 />
               </div>
@@ -71,7 +84,7 @@ const Register = ({ setAlert, register }) => {
                   type='email'
                   name='email'
                   value={email}
-                  onChange={(e) => onChange(e)}
+                  onChange={(e) => setEmail(e.target.value)}
                   className='form-control'
                   id='exampleInputEmail1'
                   aria-describedby='emailHelp'
@@ -93,7 +106,7 @@ const Register = ({ setAlert, register }) => {
                   type='password'
                   name='password'
                   value={password}
-                  onChange={(e) => onChange(e)}
+                  onChange={(e) => setPassword(e.target.value)}
                   className='form-control'
                   id='inputPassword'
                   // minLength='6'
@@ -110,9 +123,8 @@ const Register = ({ setAlert, register }) => {
               <div className='col-sm-10'>
                 <input
                   type='password'
-                  name='password2'
-                  value={password2}
-                  onChange={(e) => onChange(e)}
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
                   className='form-control'
                   id='inputPassword'
                   // minLength='6'
@@ -123,7 +135,7 @@ const Register = ({ setAlert, register }) => {
               </div>
             </div>
             <button type='submit' className='btn  btn-dark'>
-              Submit
+              Register
             </button>
           </form>
         </div>
@@ -131,8 +143,5 @@ const Register = ({ setAlert, register }) => {
     </Fragment>
   );
 };
-Register.propTypes = {
-  setAlert: PropTypes.func.isRequired,
-  register: PropTypes.func.isRequired,
-};
-export default connect(null, {})(Register);
+
+export default Register;
