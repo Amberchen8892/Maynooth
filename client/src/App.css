@@ -207,3 +207,6 @@ body {
 .mobile-nav {
   display: flex;
 }
+.checkout-link {
+  color: black;
+}

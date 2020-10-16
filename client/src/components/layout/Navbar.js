@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
 import { NavDropdown, Container, Nav } from 'react-bootstrap';
 import { logout } from '../../actions/userActions';
@@ -53,9 +54,9 @@ const Navbar = ({ history }) => {
             </li>
             {userInfo ? (
               <NavDropdown title={userInfo.name} id='username'>
-                <Link to='/profile'>
+                <LinkContainer to='/profile'>
                   <NavDropdown.Item>Profile</NavDropdown.Item>
-                </Link>
+                </LinkContainer>
                 <NavDropdown.Item onClick={logoutHandler}>
                   Logout
                 </NavDropdown.Item>
@@ -363,7 +364,7 @@ const Navbar = ({ history }) => {
           </div>
           <div className='mobile-nav'>
             <Nav.Item style={{ padding: '0', margin: '0' }}>
-              <Nav.Link href='/home'>
+              <Nav.Link href='/cart'>
                 <i
                   style={{ color: 'white' }}
                   className='fas fa-shopping-cart'
@@ -381,9 +382,9 @@ const Navbar = ({ history }) => {
                     .join('')}
                   id='username'
                 >
-                  <Link to='/profile'>
+                  <LinkContainer to='/profile'>
                     <NavDropdown.Item>Profile</NavDropdown.Item>
-                  </Link>
+                  </LinkContainer>
                   <NavDropdown.Item onClick={logoutHandler}>
                     Logout
                   </NavDropdown.Item>

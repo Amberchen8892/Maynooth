@@ -11,6 +11,10 @@ import ProductsScreen from './components/screens/ProductsScreen';
 import ProductDetail from './components/screens/ProductDetail';
 import CartScreen from './components/screens/CartScreen';
 import ProfileScreen from './components/screens/ProfileScreen';
+import ShippingScreen from './components/screens/ShippingScreen';
+import PaymentScreen from './components/screens/PaymentScreen';
+import PlaceOrderScreen from './components/screens/PlaceOrderScreen';
+
 //Redux
 import { Provider } from 'react-redux';
 import store from './store';
@@ -32,6 +36,9 @@ const App = () => (
             <Route path='/products' component={ProductsScreen} />
             <Route path='/product/:id' component={ProductDetail} />
             <Route path='/cart/:id?' component={CartScreen} />
+            <Route path='/shipping' component={ShippingScreen} />
+            <Route path='/payment' component={PaymentScreen} />
+            <Route path='/placeorder' component={PlaceOrderScreen} />
           </Switch>
         </section>
         <Footer />
