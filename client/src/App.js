@@ -5,7 +5,7 @@ import Home from './components/layout/Home';
 import Footer from './components/layout/Footer';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
-import Admin from './components/auth/Admin';
+// import Admin from './components/auth/Admin';
 
 import ProductsScreen from './components/screens/ProductsScreen';
 import ProductDetail from './components/screens/ProductDetail';
@@ -15,6 +15,8 @@ import ShippingScreen from './components/screens/ShippingScreen';
 import PaymentScreen from './components/screens/PaymentScreen';
 import PlaceOrderScreen from './components/screens/PlaceOrderScreen';
 import OrderScreen from './components/screens/OrderScreen';
+import UserListScreen from './components/screens/UserListScreen';
+import UserEditScreen from './components/screens/UserEditScreen';
 
 //Redux
 import { Provider } from 'react-redux';
@@ -32,7 +34,7 @@ const App = () => (
           <Switch>
             <Route exact path='/register' component={Register} />
             <Route path='/login' component={Login} />
-            <Route path='/admin' component={Admin} />
+            {/* <Route path='/admin' component={Admin} /> */}
             <Route path='/profile' component={ProfileScreen} />
             <Route path='/products' component={ProductsScreen} />
             <Route path='/product/:id' component={ProductDetail} />
@@ -41,6 +43,8 @@ const App = () => (
             <Route path='/payment' component={PaymentScreen} />
             <Route path='/placeorder' component={PlaceOrderScreen} />
             <Route path='/order/:id' component={OrderScreen} />
+            <Route path='/admin/userlist' component={UserListScreen} />
+            <Route path='/admin/user/:id/edit' component={UserEditScreen} />
           </Switch>
         </section>
         <Footer />

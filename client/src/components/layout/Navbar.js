@@ -20,6 +20,7 @@ const Navbar = ({ history }) => {
     dispatch(logout());
     history.push('/login');
   };
+
   return (
     <Fragment>
       <div id='content-desktop'>
@@ -52,7 +53,22 @@ const Navbar = ({ history }) => {
                 Cart
               </Link>
             </li>
-            {userInfo ? (
+            {userInfo && userInfo.isAdmin ? (
+              <NavDropdown title='Admin' id='adminmenu'>
+                <LinkContainer to='/admin/userlist'>
+                  <NavDropdown.Item>Users</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to='/admin/productlist'>
+                  <NavDropdown.Item>Products</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to='/admin/orderlist'>
+                  <NavDropdown.Item>Orders</NavDropdown.Item>
+                </LinkContainer>
+                <NavDropdown.Item onClick={logoutHandler}>
+                  Logout
+                </NavDropdown.Item>
+              </NavDropdown>
+            ) : userInfo ? (
               <NavDropdown title={userInfo.name} id='username'>
                 <LinkContainer to='/profile'>
                   <NavDropdown.Item>Profile</NavDropdown.Item>
@@ -363,40 +379,57 @@ const Navbar = ({ history }) => {
             </a>
           </div>
           <div className='mobile-nav'>
-            <Nav.Item style={{ padding: '0', margin: '0' }}>
-              <Nav.Link href='/cart'>
-                <i
-                  style={{ color: 'white' }}
-                  className='fas fa-shopping-cart'
-                ></i>{' '}
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item style={{ padding: '0', margin: '0' }}>
-              {userInfo ? (
-                <NavDropdown
-                  title={userInfo.name
-                    .split(' ')
-                    .map(function (item) {
-                      return item[0];
-                    })
-                    .join('')}
-                  id='username'
-                >
-                  <LinkContainer to='/profile'>
-                    <NavDropdown.Item>Profile</NavDropdown.Item>
-                  </LinkContainer>
-                  <NavDropdown.Item onClick={logoutHandler}>
-                    Logout
-                  </NavDropdown.Item>
-                </NavDropdown>
-              ) : (
-                <li className='nav-item'>
-                  <Link className='nav-link hover-nav' to='/login'>
-                    <i className='fas fa-user'></i>
-                  </Link>
-                </li>
-              )}
-            </Nav.Item>
+            <Nav className='justify-content-end' activeKey='/home'>
+              <Nav.Item>
+                <Nav.Link href='/cart'>
+                  <i
+                    style={{ color: 'white' }}
+                    className='fas fa-shopping-cart'
+                  ></i>{' '}
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                {userInfo && userInfo.isAdmin ? (
+                  <NavDropdown title='Admin' id='adminmenu'>
+                    <LinkContainer to='/admin/userlist'>
+                      <NavDropdown.Item>Users</NavDropdown.Item>
+                    </LinkContainer>
+                    <LinkContainer to='/admin/productlist'>
+                      <NavDropdown.Item>Products</NavDropdown.Item>
+                    </LinkContainer>
+                    <LinkContainer to='/admin/orderlist'>
+                      <NavDropdown.Item>Orders</NavDropdown.Item>
+                    </LinkContainer>
+                    <NavDropdown.Item onClick={logoutHandler}>
+                      Logout
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                ) : userInfo ? (
+                  <NavDropdown
+                    title={userInfo.name
+                      .split(' ')
+                      .map(function (item) {
+                        return item[0];
+                      })
+                      .join('')}
+                    id='username'
+                  >
+                    <LinkContainer to='/profile'>
+                      <NavDropdown.Item>Profile</NavDropdown.Item>
+                    </LinkContainer>
+                    <NavDropdown.Item onClick={logoutHandler}>
+                      Logout
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                ) : (
+                  <li className='nav-item'>
+                    <Link className='nav-link hover-nav' to='/login'>
+                      <i className='fas fa-user'></i>
+                    </Link>
+                  </li>
+                )}
+              </Nav.Item>
+            </Nav>
           </div>
         </header>
 

@@ -151,11 +151,11 @@ body {
 .sidebar {
   position: fixed;
   transition: all 0.4s ease-in-out;
-  transform: translateX(-30rem);
-  width: 30rem;
+  transform: translateX(-100vw);
+  width: 100vw;
   background-color: #c0c0c0;
   height: 100vh;
-  z-index: 10;
+  z-index: 30;
 }
 .sidebar.open {
   transform: translateX(0);
