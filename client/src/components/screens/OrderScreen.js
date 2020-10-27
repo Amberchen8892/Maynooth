@@ -70,7 +70,7 @@ const OrderScreen = ({ match, history }) => {
         setSdkReady(true);
       }
     }
-  }, [order, orderId, successPay, successDeliver]);
+  }, [history, dispatch, userInfo, order, orderId, successPay, successDeliver]);
 
   const successPaymentHandler = (paymentResult) => {
     console.log('frontend', paymentResult);
@@ -212,6 +212,8 @@ const OrderScreen = ({ match, history }) => {
                       )}
                     </ListGroup.Item>
                   )}
+
+                  {loadingDeliver && <Loader />}
                   {userInfo &&
                     userInfo.isAdmin &&
                     order.isPaid &&

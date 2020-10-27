@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
@@ -7,6 +7,7 @@ import { NavDropdown, Container, Nav } from 'react-bootstrap';
 import { logout } from '../../actions/userActions';
 
 const Navbar = ({ history }) => {
+  const [keyword, setKeyword] = useState('');
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
@@ -21,6 +22,15 @@ const Navbar = ({ history }) => {
     history.push('/login');
   };
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+    if (keyword.trim()) {
+      history.push(`/search/${keyword}`);
+    } else {
+      history.push('/products');
+    }
+  };
+
   return (
     <Fragment>
       <div id='content-desktop'>
@@ -31,12 +41,13 @@ const Navbar = ({ history }) => {
           <span className='navbar-brand mb-0 h1' style={{ color: 'white' }}>
             <Link to='/'>Maynooth</Link>
           </span>
-          <form className='form-inline my-2 my-lg-0'>
+          <form className='form-inline my-2 my-lg-0' onSubmit={submitHandler}>
             <input
               className='form-control mr-sm-2'
               type='search'
               placeholder='Search'
               aria-label='Search'
+              onChange={(e) => setKeyword(e.target.value)}
             />
             <button
               className='btn btn-outline-success my-2 my-sm-0'
