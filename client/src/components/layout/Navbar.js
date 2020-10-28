@@ -39,7 +39,21 @@ const Navbar = ({ history }) => {
           style={{ paddingRight: '100px', paddingLeft: '100px' }}
         >
           <span className='navbar-brand mb-0 h1' style={{ color: 'white' }}>
-            <Link to='/'>Maynooth</Link>
+            <Link to='/'>
+              <span
+                style={{
+                  fontSize: '2rem',
+                  color: '#f8961e',
+                  fontWeight: 'bolder',
+                }}
+              >
+                M
+              </span>
+              <span style={{ color: 'white', fontWeight: 'bold' }}>AY</span>
+              <spna style={{ color: '#2ec4b6', fontWeight: 'bold' }}>N</spna>
+              <span style={{ color: 'white', fontWeight: 'bold' }}>OOT</span>
+              <span style={{ color: '#9b5de5', fontWeight: 'bold' }}>H</span>
+            </Link>
           </span>
           <form className='form-inline my-2 my-lg-0' onSubmit={submitHandler}>
             <input
@@ -117,9 +131,23 @@ const Navbar = ({ history }) => {
                 role='button'
                 aria-haspopup='true'
                 aria-expanded='false'
-                style={{ color: '#DF7F20', fontWeight: 'bold' }}
+                style={{ color: 'black', fontWeight: 'bolder' }}
               >
-                New
+                <span
+                  style={{
+                    border: '1px solid white',
+                    width: '30px',
+                    padding: '5px',
+                    borderTopRightRadius: '30%',
+                    borderBottomLeftRadius: '30%',
+                    backgroundColor: '#49b2ea',
+                    backgroundImage:
+                      'linear-gradient(90deg, #49b2ea 0%, #80d0ca 100%)',
+                  }}
+                >
+                  {' '}
+                  New
+                </span>
               </a>
               <div className='dropdown-menu' style={{ width: '100vw' }}>
                 <div className='container'>

@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Row, Col, Container } from 'react-bootstrap';
 
 const Home = () => {
   return (
@@ -32,8 +33,15 @@ const Home = () => {
               style={{ height: '500px' }}
             />
             <div className='carousel-caption d-none d-md-block'>
-              <h5>First slide label</h5>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h5 style={{ color: '#054564', fontWeight: 'bold' }}>
+                BEDS AND MATRESSES
+              </h5>
+              <p
+                style={{ color: '#2A4759', fontFamily: 'Playfair, san-serif' }}
+              >
+                Everyone is different, yet the same. We all have different
+                sleeping preferences{' '}
+              </p>
             </div>
           </div>
           <div className='carousel-item'>
@@ -44,8 +52,14 @@ const Home = () => {
               style={{ height: '500px' }}
             />
             <div className='carousel-caption d-none d-md-block'>
-              <h5>Second slide label</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h5 style={{ color: '#054564', fontWeight: 'bold' }}>
+                LIVING ROOM
+              </h5>
+              <p
+                style={{ color: '#2A4759', fontFamily: 'Playfair, san-serif' }}
+              >
+                Most of us collect things that we love to see every day.{' '}
+              </p>
             </div>
           </div>
           <div className='carousel-item'>
@@ -56,9 +70,11 @@ const Home = () => {
               style={{ height: '500px' }}
             />
             <div className='carousel-caption d-none d-md-block'>
-              <h5>Third slide label</h5>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              <h5 style={{ color: '#054564', fontWeight: 'bold' }}>KITCHEN</h5>
+              <p
+                style={{ color: '#2A4759', fontFamily: 'Playfair, san-serif' }}
+              >
+                Get a new look for your kitchen.
               </p>
             </div>
           </div>
@@ -82,21 +98,32 @@ const Home = () => {
           <span className='sr-only'>Next</span>
         </a>
       </div>
-
-      <div className='container section-1' style={{ paddingTop: '2rem' }}>
-        <div>
-          <h3>ORGIGINAL DESIGN</h3>
-          <p>from our in-house designers</p>
-        </div>
-        <div>
-          <h3>FREE DELIVERY</h3>
-          <p>on 100's of lines</p>
-        </div>
-        <div>
-          <h3>HABITAT HERIATGE</h3>
-          <p>55 years of inovation</p>
-        </div>
+      <div className='container section-1' style={{ marginTop: '60px' }}>
+        <Row className='container' style={{ textAlign: 'center' }}>
+          <Col xs={12} md={4}>
+            <div>
+              <i class='fas fa-pencil-ruler fa-3x icon-circle'></i>
+              <h3 style={{ marginTop: '0.5rem' }}>ORGIGINAL DESIGN</h3>
+              <p>from our in-house designers</p>
+            </div>
+          </Col>
+          <Col xs={12} md={4}>
+            <div>
+              <i class='fas fa-truck-moving fa-3x  icon-circle'></i>
+              <h3 style={{ marginTop: '0.5rem' }}>FREE DELIVERY</h3>
+              <p>on 100's of lines</p>
+            </div>
+          </Col>
+          <Col xs={12} md={4}>
+            <div>
+              <i class='fas fa-crown fa-3x  icon-circle'></i>
+              <h3 style={{ marginTop: '0.5rem' }}>HABITAT HERIATGE</h3>
+              <p>55 years of inovation</p>
+            </div>
+          </Col>
+        </Row>
       </div>
+
       <div className='container'>
         {' '}
         <hr className='my-4'></hr>
@@ -374,7 +401,7 @@ const Home = () => {
                         with IKEA's laundry hampers and baskets that come in
                         various styles, sizes, colors.
                       </p>
-                      <a className='btn btn-primary'>Button</a>
+                      <a className='btn btn-primary'> SHOP NOW</a>
                     </div>
                   </div>
                 </div>
@@ -395,7 +422,7 @@ const Home = () => {
                         to keep all their new interests organized and help
                         refresh the look of their room.
                       </p>
-                      <a className='btn btn-primary'>Button</a>
+                      <a className='btn btn-primary'> SHOP NOW</a>
                     </div>
                   </div>
                 </div>
@@ -414,7 +441,7 @@ const Home = () => {
                         tables make it feel a bit easier. . With drawers and
                         shelves that keep necessities in reach.
                       </p>
-                      <a className='btn btn-primary'>Button</a>
+                      <a className='btn btn-primary'> SHOP NOW</a>
                     </div>
                   </div>
                 </div>
@@ -439,7 +466,7 @@ const Home = () => {
                         anything from a simple snack to an elaborate family
                         feast.
                       </p>
-                      <a className='btn btn-primary'>Button</a>
+                      <a className='btn btn-primary'> SHOP NOW</a>
                     </div>
                   </div>
                 </div>
@@ -458,7 +485,7 @@ const Home = () => {
                         you have, and match any desk or table. They’re great to
                         sit in too.
                       </p>
-                      <a className='btn btn-primary'>Button</a>
+                      <a className='btn btn-primary'> SHOP NOW</a>
                     </div>
                   </div>
                 </div>
@@ -477,7 +504,7 @@ const Home = () => {
                         fill the gap. Create your own solution with rails,
                         hooks, containers and shelves.
                       </p>
-                      <a className='btn btn-primary'>Button</a>
+                      <a className='btn btn-primary'> SHOP NOW</a>
                     </div>
                   </div>
                 </div>
@@ -502,7 +529,7 @@ const Home = () => {
                         is perfect for giving your meals and refreshments little
                         lift.
                       </p>
-                      <a className='btn btn-primary'>Button</a>
+                      <a className='btn btn-primary'> SHOP NOW</a>
                     </div>
                   </div>
                 </div>
@@ -521,7 +548,7 @@ const Home = () => {
                         stands. They’re easy to assemble, easy to move and easy
                         to fit in.
                       </p>
-                      <a className='btn btn-primary'>Button</a>
+                      <a className='btn btn-primary'> SHOP NOW</a>
                     </div>
                   </div>
                 </div>
@@ -540,7 +567,7 @@ const Home = () => {
                         softer. Choose between flatwoven or low pile rugs for
                         open, flexible spaces.
                       </p>
-                      <a className='btn btn-primary'>Button</a>
+                      <a className='btn btn-primary'> SHOP NOW</a>
                     </div>
                   </div>
                 </div>

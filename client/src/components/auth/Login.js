@@ -12,7 +12,9 @@ const Login = ({ location, history }) => {
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.userLogin);
   const { loading, error, userInfo } = userLogin;
-  const redirect = location.search ? location.search.split('=')[1] : '/';
+  const redirect = location.search
+    ? location.search.split('=')[1]
+    : '/products';
   useEffect(() => {
     if (userInfo) {
       history.push(redirect);
