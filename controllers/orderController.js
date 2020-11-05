@@ -1,7 +1,7 @@
 import asyncHandler from 'express-async-handler';
 
 import Order from '../models/orderModel.js';
-import { body } from 'express-validator';
+// import { body } from 'express-validator';
 
 // @des    Create order
 // @route  POST /api/orders
