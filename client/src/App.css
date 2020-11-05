@@ -23,7 +23,12 @@ body {
 .caret-off::after {
   display: none;
 }
-
+.navbar-brand:hover {
+  transform: scale(1.2);
+}
+.link-navbar {
+  text-decoration: none !important;
+}
 .carousel-indicators li {
   border-radius: 50%;
   width: 12px;
@@ -31,11 +36,6 @@ body {
   background-color: #404040;
 }
 
-/* .section-5 {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 30px;
-} */
 .section-7 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -148,7 +148,7 @@ body {
   transition: all 0.4s ease-in-out;
   transform: translateX(-100vw);
   width: 100vw;
-  background-color: #c0c0c0;
+  background-color: #ffffff;
   height: 100vh;
   z-index: 30;
 }
@@ -196,6 +196,10 @@ body {
 .rating span {
   margin: 0.1rem;
 }
+.rating {
+  overflow: hidden;
+  white-space: nowrap;
+}
 #username {
   color: white !important;
 }
@@ -215,4 +219,10 @@ body {
   line-height: 100px;
   vertical-align: middle;
   padding: 25px;
+}
+.product-name:link {
+  text-decoration: none;
+}
+.sidebar ul > li {
+  list-style-type: none;
 }

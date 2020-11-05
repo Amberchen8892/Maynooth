@@ -81,12 +81,13 @@ const ProductDetail = ({ history, match }) => {
                 <ListGroup.Item>
                   <Rating
                     value={product.rating}
-                    text={`${product.numReviews} reviews`}
+                    text={`${product.numReviews} `}
                   />
                 </ListGroup.Item>
                 <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
                 <ListGroup.Item>
-                  Description: ${product.description}
+                  <strong style={{ fontWeight: 'bold' }}>Description:</strong>{' '}
+                  {product.description}
                 </ListGroup.Item>
               </ListGroup>
             </Col>

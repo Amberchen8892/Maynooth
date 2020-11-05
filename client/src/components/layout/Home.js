@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-bootstrap';
 import { Row, Col, Container } from 'react-bootstrap';
 
 const Home = () => {
@@ -153,7 +154,7 @@ const Home = () => {
             >
               Must have dining furniture
             </p>
-            <a href='#' className='btn btn-outline-dark'>
+            <a href='/products' className='btn btn-outline-dark'>
               SHOP DINNING ROOM
             </a>
           </div>
@@ -181,7 +182,7 @@ const Home = () => {
             >
               Instagram worthy-dinnerware
             </p>
-            <a href='#' className='btn btn-outline-dark'>
+            <a href='/products' className='btn btn-outline-dark'>
               SHOP DINNERWARE
             </a>
           </div>
@@ -207,7 +208,9 @@ const Home = () => {
                   <p
                     style={{ color: 'white', textDecorationLine: 'underline' }}
                   >
-                    SHOP NOW
+                    <a href='/products' style={{ color: 'white' }}>
+                      SHOP NOW
+                    </a>
                   </p>
                 </div>
               </div>
@@ -222,7 +225,9 @@ const Home = () => {
                   <p
                     style={{ color: 'black', textDecorationLine: 'underline' }}
                   >
-                    SHOP NOW
+                    <a href='/products' style={{ color: 'black' }}>
+                      SHOP NOW
+                    </a>
                   </p>
                 </div>
               </div>
@@ -237,7 +242,9 @@ const Home = () => {
                   <p
                     style={{ color: 'white', textDecorationLine: 'underline' }}
                   >
-                    SHOP NOW
+                    <a href='/products' style={{ color: 'white' }}>
+                      SHOP NOW
+                    </a>
                   </p>
                 </div>
               </div>
@@ -273,7 +280,7 @@ const Home = () => {
       </div>
       <div className='container section-3' style={{ marginTop: '4rem' }}>
         <div className='row'>
-          <div className='col-md-8'>
+          <div className='col-md-8' style={{ marginTop: '1rem' }}>
             <div
               className='card bg-dark text-white text-right'
               style={{ height: '18rem' }}
@@ -286,16 +293,22 @@ const Home = () => {
               />
               <div className='card-img-overlay'>
                 <h5 className='card-title'>Catch Some Zzzz</h5>
-                <p
-                  className='card-text'
-                  style={{ fontSize: '12px', textDecoration: 'underline' }}
-                >
-                  SHOP BEDDING
+                <p className='card-text'>
+                  <a
+                    href='/products'
+                    style={{
+                      fontSize: '12px',
+                      textDecoration: 'underline',
+                      color: 'white',
+                    }}
+                  >
+                    SHOP BEDDING
+                  </a>
                 </p>
               </div>
             </div>
           </div>
-          <div className='col-6 col-md-4'>
+          <div className=' col-md-4' style={{ marginTop: '1rem' }}>
             <div
               className='card bg-dark text-white text-right'
               style={{ height: '18rem' }}
@@ -312,7 +325,16 @@ const Home = () => {
                   className='card-text'
                   style={{ fontSize: '12px', textDecoration: 'underline' }}
                 >
-                  SHOP BEDROOM
+                  <a
+                    href='/products'
+                    style={{
+                      fontSize: '12px',
+                      textDecoration: 'underline',
+                      color: 'white',
+                    }}
+                  >
+                    SHOP BEDROOM
+                  </a>
                 </p>
               </div>
             </div>
@@ -401,7 +423,10 @@ const Home = () => {
                         with IKEA's laundry hampers and baskets that come in
                         various styles, sizes, colors.
                       </p>
-                      <a className='btn btn-primary'> SHOP NOW</a>
+                      <a className='btn btn-primary' href='/products'>
+                        {' '}
+                        SHOP NOW
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -422,7 +447,10 @@ const Home = () => {
                         to keep all their new interests organized and help
                         refresh the look of their room.
                       </p>
-                      <a className='btn btn-primary'> SHOP NOW</a>
+                      <a className='btn btn-primary' href='/products'>
+                        {' '}
+                        SHOP NOW
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -441,7 +469,10 @@ const Home = () => {
                         tables make it feel a bit easier. . With drawers and
                         shelves that keep necessities in reach.
                       </p>
-                      <a className='btn btn-primary'> SHOP NOW</a>
+                      <a className='btn btn-primary' href='/products'>
+                        {' '}
+                        SHOP NOW
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -466,7 +497,10 @@ const Home = () => {
                         anything from a simple snack to an elaborate family
                         feast.
                       </p>
-                      <a className='btn btn-primary'> SHOP NOW</a>
+                      <a className='btn btn-primary' href='/products'>
+                        {' '}
+                        SHOP NOW
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -485,7 +519,10 @@ const Home = () => {
                         you have, and match any desk or table. They’re great to
                         sit in too.
                       </p>
-                      <a className='btn btn-primary'> SHOP NOW</a>
+                      <a className='btn btn-primary' href='/products'>
+                        {' '}
+                        SHOP NOW
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -504,7 +541,10 @@ const Home = () => {
                         fill the gap. Create your own solution with rails,
                         hooks, containers and shelves.
                       </p>
-                      <a className='btn btn-primary'> SHOP NOW</a>
+                      <a className='btn btn-primary' href='/products'>
+                        {' '}
+                        SHOP NOW
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -529,7 +569,10 @@ const Home = () => {
                         is perfect for giving your meals and refreshments little
                         lift.
                       </p>
-                      <a className='btn btn-primary'> SHOP NOW</a>
+                      <a className='btn btn-primary' href='/products'>
+                        {' '}
+                        SHOP NOW
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -548,7 +591,10 @@ const Home = () => {
                         stands. They’re easy to assemble, easy to move and easy
                         to fit in.
                       </p>
-                      <a className='btn btn-primary'> SHOP NOW</a>
+                      <a className='btn btn-primary' href='/products'>
+                        {' '}
+                        SHOP NOW
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -567,7 +613,10 @@ const Home = () => {
                         softer. Choose between flatwoven or low pile rugs for
                         open, flexible spaces.
                       </p>
-                      <a className='btn btn-primary'> SHOP NOW</a>
+                      <a className='btn btn-primary' href='/products'>
+                        {' '}
+                        SHOP NOW
+                      </a>
                     </div>
                   </div>
                 </div>

@@ -39,7 +39,7 @@ const Navbar = ({ history }) => {
           style={{ paddingRight: '100px', paddingLeft: '100px' }}
         >
           <span className='navbar-brand mb-0 h1' style={{ color: 'white' }}>
-            <Link to='/'>
+            <Link to='/' className='link-navbar'>
               <span
                 style={{
                   fontSize: '2rem',
@@ -182,15 +182,63 @@ const Navbar = ({ history }) => {
                         <p>Natural materials</p>
                       </div>
                     </div>
-                    <div className='col-sm'>col-sm</div>
-                    <div className='col-sm'>col-sm</div>
+                    <div className='col-sm'>
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1562663474-6cbb3eaa4d14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80'
+                          className='card-img'
+                          alt='...'
+                          style={{ height: '300px' }}
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1595431803521-bffc05ea8981?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </li>
             <li className='nav-item dropdown' style={{ position: 'initial' }}>
               <a
-                className='nav-link dropdown-toggle caret-off sub-text'
+                className='nav-link dropdown-toggle caret-off sub-text test-a'
                 data-toggle='dropdown'
                 href='#'
                 role='button'
@@ -251,8 +299,62 @@ const Navbar = ({ history }) => {
                       </div>
                     </div>
 
-                    <div className='col-sm'>col-sm</div>
-                    <div className='col-sm'>col-sm</div>
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1520&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1521783593447-5702b9bfd267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1121&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -270,11 +372,113 @@ const Navbar = ({ history }) => {
                 Soft Furnishings
               </a>
               <div className='dropdown-menu' style={{ width: '100vw' }}>
-                <div className='  row'>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
+                <div className='container'>
+                  <div className='  row'>
+                    <div className='col-sm'>
+                      <div className='sub-title'>
+                        <h3>Living Room</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bookcases & shelving</p>
+                        <p>Coffee tables</p>
+                        <p>Console tables</p>
+                        <p>Pouffes & footstools</p>
+                        <p>Side tables</p>
+                        <p>Sofas & armchairs</p>
+                        <p>TV stands & units</p>
+                        <p>Home Office & Study</p>
+                      </div>
+                      <div className='sub-title'>
+                        <h3>Desks</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Office accessories</p>
+                        <p>Office chairs</p>
+                        <p>Office storage</p>
+                      </div>
+                    </div>
+
+                    <div className='col-sm'>
+                      <div className='sub-title'>
+                        <h3> Dining Room</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bar stools</p>
+                        <p>Chairs & benches</p>
+                        <p>Dining sets</p>
+                        <p>Dining tables</p>
+                        <p>Side tables</p>
+                        <p>Extendable dining tables</p>
+                      </div>
+                      <div className='sub-title'>
+                        <h3>Storage Furniture</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bathroom storage</p>
+                        <p>Bookcases & shelving</p>
+                        <p>Cupboards</p>
+                        <p>Dining room cabinets</p>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1520&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1521783593447-5702b9bfd267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1121&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
@@ -291,11 +495,112 @@ const Navbar = ({ history }) => {
                 Lighting
               </a>
               <div className='dropdown-menu' style={{ width: '100vw' }}>
+                <div className='container'></div>
                 <div className='  row'>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
+                  <div className='col-sm'>
+                    <div className='sub-title'>
+                      <h3>Living Room</h3>
+                    </div>
+                    <div className='text-sub'>
+                      <p>Bookcases & shelving</p>
+                      <p>Coffee tables</p>
+                      <p>Console tables</p>
+                      <p>Pouffes & footstools</p>
+                      <p>Side tables</p>
+                      <p>Sofas & armchairs</p>
+                      <p>TV stands & units</p>
+                      <p>Home Office & Study</p>
+                    </div>
+                    <div className='sub-title'>
+                      <h3>Desks</h3>
+                    </div>
+                    <div className='text-sub'>
+                      <p>Office accessories</p>
+                      <p>Office chairs</p>
+                      <p>Office storage</p>
+                    </div>
+                  </div>
+
+                  <div className='col-sm'>
+                    <div className='sub-title'>
+                      <h3> Dining Room</h3>
+                    </div>
+                    <div className='text-sub'>
+                      <p>Bar stools</p>
+                      <p>Chairs & benches</p>
+                      <p>Dining sets</p>
+                      <p>Dining tables</p>
+                      <p>Side tables</p>
+                      <p>Extendable dining tables</p>
+                    </div>
+                    <div className='sub-title'>
+                      <h3>Storage Furniture</h3>
+                    </div>
+                    <div className='text-sub'>
+                      <p>Bathroom storage</p>
+                      <p>Bookcases & shelving</p>
+                      <p>Cupboards</p>
+                      <p>Dining room cabinets</p>
+                      <p></p>
+                    </div>
+                  </div>
+
+                  <div
+                    className='col-sm'
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <div className='card bg-dark text-white'>
+                      <img
+                        src='https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1520&q=80'
+                        className='card-img'
+                        alt='...'
+                      />
+                      <div className='card-img-overlay'>
+                        <h5
+                          className='card-title'
+                          style={{
+                            color: 'black',
+                            fontWeight: 'bold',
+                            textDecoration: 'underline',
+                          }}
+                        >
+                          Shop now
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className='col-sm'
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <div className='card bg-dark text-white'>
+                      <img
+                        src='https://images.unsplash.com/photo-1521783593447-5702b9bfd267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1121&q=80'
+                        className='card-img'
+                        alt='...'
+                      />
+                      <div className='card-img-overlay'>
+                        <h5
+                          className='card-title'
+                          style={{
+                            color: 'black',
+                            fontWeight: 'bold',
+                            textDecoration: 'underline',
+                          }}
+                        >
+                          Shop now
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
@@ -312,11 +617,113 @@ const Navbar = ({ history }) => {
                 Accessories
               </a>
               <div className='dropdown-menu' style={{ width: '100vw' }}>
-                <div className='  row'>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
+                <div className='container'>
+                  <div className='  row'>
+                    <div className='col-sm'>
+                      <div className='sub-title'>
+                        <h3>Living Room</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bookcases & shelving</p>
+                        <p>Coffee tables</p>
+                        <p>Console tables</p>
+                        <p>Pouffes & footstools</p>
+                        <p>Side tables</p>
+                        <p>Sofas & armchairs</p>
+                        <p>TV stands & units</p>
+                        <p>Home Office & Study</p>
+                      </div>
+                      <div className='sub-title'>
+                        <h3>Desks</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Office accessories</p>
+                        <p>Office chairs</p>
+                        <p>Office storage</p>
+                      </div>
+                    </div>
+
+                    <div className='col-sm'>
+                      <div className='sub-title'>
+                        <h3> Dining Room</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bar stools</p>
+                        <p>Chairs & benches</p>
+                        <p>Dining sets</p>
+                        <p>Dining tables</p>
+                        <p>Side tables</p>
+                        <p>Extendable dining tables</p>
+                      </div>
+                      <div className='sub-title'>
+                        <h3>Storage Furniture</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bathroom storage</p>
+                        <p>Bookcases & shelving</p>
+                        <p>Cupboards</p>
+                        <p>Dining room cabinets</p>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1520&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1521783593447-5702b9bfd267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1121&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
@@ -333,11 +740,113 @@ const Navbar = ({ history }) => {
                 Kitchen
               </a>
               <div className='dropdown-menu' style={{ width: '100vw' }}>
-                <div className='  row'>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
+                <div className='container'>
+                  <div className='  row'>
+                    <div className='col-sm'>
+                      <div className='sub-title'>
+                        <h3>Living Room</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bookcases & shelving</p>
+                        <p>Coffee tables</p>
+                        <p>Console tables</p>
+                        <p>Pouffes & footstools</p>
+                        <p>Side tables</p>
+                        <p>Sofas & armchairs</p>
+                        <p>TV stands & units</p>
+                        <p>Home Office & Study</p>
+                      </div>
+                      <div className='sub-title'>
+                        <h3>Desks</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Office accessories</p>
+                        <p>Office chairs</p>
+                        <p>Office storage</p>
+                      </div>
+                    </div>
+
+                    <div className='col-sm'>
+                      <div className='sub-title'>
+                        <h3> Dining Room</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bar stools</p>
+                        <p>Chairs & benches</p>
+                        <p>Dining sets</p>
+                        <p>Dining tables</p>
+                        <p>Side tables</p>
+                        <p>Extendable dining tables</p>
+                      </div>
+                      <div className='sub-title'>
+                        <h3>Storage Furniture</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bathroom storage</p>
+                        <p>Bookcases & shelving</p>
+                        <p>Cupboards</p>
+                        <p>Dining room cabinets</p>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1520&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1521783593447-5702b9bfd267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1121&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
@@ -354,11 +863,113 @@ const Navbar = ({ history }) => {
                 Offer
               </a>
               <div className='dropdown-menu' style={{ width: '100vw' }}>
-                <div className='  row'>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
+                <div className='container'>
+                  <div className='  row'>
+                    <div className='col-sm'>
+                      <div className='sub-title'>
+                        <h3>Living Room</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bookcases & shelving</p>
+                        <p>Coffee tables</p>
+                        <p>Console tables</p>
+                        <p>Pouffes & footstools</p>
+                        <p>Side tables</p>
+                        <p>Sofas & armchairs</p>
+                        <p>TV stands & units</p>
+                        <p>Home Office & Study</p>
+                      </div>
+                      <div className='sub-title'>
+                        <h3>Desks</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Office accessories</p>
+                        <p>Office chairs</p>
+                        <p>Office storage</p>
+                      </div>
+                    </div>
+
+                    <div className='col-sm'>
+                      <div className='sub-title'>
+                        <h3> Dining Room</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bar stools</p>
+                        <p>Chairs & benches</p>
+                        <p>Dining sets</p>
+                        <p>Dining tables</p>
+                        <p>Side tables</p>
+                        <p>Extendable dining tables</p>
+                      </div>
+                      <div className='sub-title'>
+                        <h3>Storage Furniture</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bathroom storage</p>
+                        <p>Bookcases & shelving</p>
+                        <p>Cupboards</p>
+                        <p>Dining room cabinets</p>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1520&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1521783593447-5702b9bfd267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1121&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
@@ -375,11 +986,113 @@ const Navbar = ({ history }) => {
                 Inspiration
               </a>
               <div className='dropdown-menu' style={{ width: '100vw' }}>
-                <div className='  row'>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
+                <div className='container'>
+                  <div className='  row'>
+                    <div className='col-sm'>
+                      <div className='sub-title'>
+                        <h3>Living Room</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bookcases & shelving</p>
+                        <p>Coffee tables</p>
+                        <p>Console tables</p>
+                        <p>Pouffes & footstools</p>
+                        <p>Side tables</p>
+                        <p>Sofas & armchairs</p>
+                        <p>TV stands & units</p>
+                        <p>Home Office & Study</p>
+                      </div>
+                      <div className='sub-title'>
+                        <h3>Desks</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Office accessories</p>
+                        <p>Office chairs</p>
+                        <p>Office storage</p>
+                      </div>
+                    </div>
+
+                    <div className='col-sm'>
+                      <div className='sub-title'>
+                        <h3> Dining Room</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bar stools</p>
+                        <p>Chairs & benches</p>
+                        <p>Dining sets</p>
+                        <p>Dining tables</p>
+                        <p>Side tables</p>
+                        <p>Extendable dining tables</p>
+                      </div>
+                      <div className='sub-title'>
+                        <h3>Storage Furniture</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bathroom storage</p>
+                        <p>Bookcases & shelving</p>
+                        <p>Cupboards</p>
+                        <p>Dining room cabinets</p>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1520&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1521783593447-5702b9bfd267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1121&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
@@ -396,11 +1109,113 @@ const Navbar = ({ history }) => {
                 Sofa & Armchairs
               </a>
               <div className='dropdown-menu' style={{ width: '100vw' }}>
-                <div className='  row'>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
-                  <div className='col-sm'>col-sm</div>
+                <div className='container'>
+                  <div className='  row'>
+                    <div className='col-sm'>
+                      <div className='sub-title'>
+                        <h3>Living Room</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bookcases & shelving</p>
+                        <p>Coffee tables</p>
+                        <p>Console tables</p>
+                        <p>Pouffes & footstools</p>
+                        <p>Side tables</p>
+                        <p>Sofas & armchairs</p>
+                        <p>TV stands & units</p>
+                        <p>Home Office & Study</p>
+                      </div>
+                      <div className='sub-title'>
+                        <h3>Desks</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Office accessories</p>
+                        <p>Office chairs</p>
+                        <p>Office storage</p>
+                      </div>
+                    </div>
+
+                    <div className='col-sm'>
+                      <div className='sub-title'>
+                        <h3> Dining Room</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bar stools</p>
+                        <p>Chairs & benches</p>
+                        <p>Dining sets</p>
+                        <p>Dining tables</p>
+                        <p>Side tables</p>
+                        <p>Extendable dining tables</p>
+                      </div>
+                      <div className='sub-title'>
+                        <h3>Storage Furniture</h3>
+                      </div>
+                      <div className='text-sub'>
+                        <p>Bathroom storage</p>
+                        <p>Bookcases & shelving</p>
+                        <p>Cupboards</p>
+                        <p>Dining room cabinets</p>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1520&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className='col-sm'
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <div className='card bg-dark text-white'>
+                        <img
+                          src='https://images.unsplash.com/photo-1521783593447-5702b9bfd267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1121&q=80'
+                          className='card-img'
+                          alt='...'
+                        />
+                        <div className='card-img-overlay'>
+                          <h5
+                            className='card-title'
+                            style={{
+                              color: 'black',
+                              fontWeight: 'bold',
+                              textDecoration: 'underline',
+                            }}
+                          >
+                            Shop now
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
@@ -473,14 +1288,59 @@ const Navbar = ({ history }) => {
         </header>
 
         <aside className='sidebar'>
-          <h3>Shopping Categories</h3>
+          <h3 style={{ textAlign: 'center', marginTop: '2rem' }}>
+            Shopping Categories
+          </h3>
           <button className='sidebar-close-button' onClick={closeMenu}>
             x
           </button>
           <ul>
-            <li href='index.html'>Pants</li>
-            <li href='index.html'>Shirts</li>
-            <li href='index.html'>Dresses</li>
+            <li>
+              {' '}
+              <a href='/products' style={{ color: 'black' }}>
+                New
+              </a>
+            </li>
+            <li>
+              <a href='/products' style={{ color: 'black' }}>
+                Furniture
+              </a>
+            </li>
+            <li>
+              <a href='/products' style={{ color: 'black' }}>
+                Soft Furnishings
+              </a>
+            </li>
+            <li>
+              <a href='/products' style={{ color: 'black' }}>
+                Lighting
+              </a>
+            </li>
+            <li>
+              <a href='/products' style={{ color: 'black' }}>
+                Accessories
+              </a>
+            </li>
+            <li>
+              <a href='/products' style={{ color: 'black' }}>
+                Kitchen
+              </a>
+            </li>
+            <li>
+              <a href='/products' style={{ color: 'black' }}>
+                Offer
+              </a>
+            </li>
+            <li>
+              <a href='/products' style={{ color: 'black' }}>
+                Sofa and Armchair
+              </a>
+            </li>
+            <li>
+              <a href='/products' style={{ color: 'black' }}>
+                Inspriration
+              </a>
+            </li>
           </ul>
         </aside>
       </div>
