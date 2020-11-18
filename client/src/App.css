@@ -218,7 +218,7 @@ body {
   text-align: center;
   line-height: 100px;
   vertical-align: middle;
-  padding: 25px;
+  /* padding: 25px; */
 }
 .product-name:link {
   text-decoration: none;
